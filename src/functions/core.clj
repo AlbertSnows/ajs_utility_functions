@@ -1,5 +1,4 @@
-(ns functions.core
-  (:require [java-time.api :as t]))
+(ns functions.core)
 
 ;const reduce_number = (n) => (fn, initial_value, short_circuit = false) => {
 ;let accumulator = initial_value;
@@ -33,4 +32,4 @@
 ;return fizz_buzz_results.push(find_first_true(fizz_buzz_states));
 ;};
 
-((reduce_number n) check-fizz-buzz [])
+;((reduce_number n) check-fizz-buzz [])
