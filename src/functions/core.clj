@@ -22,14 +22,14 @@
 ;
 ;};
 ;
-;const check_fizz_buzz = (fizz_buzz_results, number) => {
-;const div_by_3 = number % 3 === 0;
-;const div_by_5 = number % 5 === 0;
-;const fizz_buzz_states = [
-;{ context: div_by_5 && div_by_3, value: "FizzBuzz" },
-;{ context: div_by_3, value: "Fizz" },
-;{ context: div_by_5, value: "Buzz" }];
-;return fizz_buzz_results.push(find_first_true(fizz_buzz_states));
-;};
+const check_fizz_buzz = (fizz_buzz_results, number) => {
+const div_by_3 = number % 3 === 0;
+const div_by_5 = number % 5 === 0;
+const fizz_buzz_states = [
+{ context: div_by_5 && div_by_3, value: "FizzBuzz" },
+{ context: div_by_3, value: "Fizz" },
+{ context: div_by_5, value: "Buzz" }];
+return fizz_buzz_results.push(find_first_true(fizz_buzz_states));
+};
 
 ;((reduce_number n) check-fizz-buzz [])
