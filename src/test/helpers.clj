@@ -1,15 +1,16 @@
-(ns test.helpers)
+(ns test.helpers
+  (:require [functions.core :refer :all]))
 
 (defn setup-check-fizzbuzz [div-by-3 div-by-5]
   (fn [accumulator number]
     (let [is-div-by-3 (div-by-3 number)
           is-div-by-5 (div-by-5 number)
-          answer
-          (cond
-            (and is-div-by-3 is-div-by-5) "FizzBuzz"
-            is-div-by-5 "Buzz"
-            is-div-by-3 "Fizz"
-            :else (str number))]
+          fizzbuzz-states [{:context (and is-div-by-3 is-div-by-5) :value "FizzBuzz"}
+                           {:context is-div-by-5 :value "Buzz"}
+                           {:context is-div-by-3 :value "Fizz"}
+                           {:context true :value number}]
+          _ (println fizzbuzz-states)
+          answer (find-first-true fizzbuzz-states)]
       (conj accumulator answer))))
 
 (def default-fizzbuzz
