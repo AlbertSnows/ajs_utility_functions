@@ -1,4 +1,4 @@
 # ajs_utility_functions
-I tend to rewrite the same functions over time in new contexts as I write code. This repo acts as a mock reference library, or just code storage, and as a playground to test new function designs. 
+I tend to rewrite the same functions over time in new contexts as I write code. This repo is a playground to explore function design ideas, good and bad. 
 
-Library will perpetually be a WIP until I update this otherwise. 
+Library will perpetually be a WIP and should probably not be used for production use cases until I update this otherwise. 
