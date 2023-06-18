@@ -9,7 +9,7 @@
                                   (fn [a _] (conj a (* 6 (+ (count a)))))
                                   []
                                   (fn [_ n] (false? n))
-                                  [true true true true false]))
+                                  [true true true true false true true]))
         tests-passed (is (true? (and test-one test-two)))]
     tests-passed))
 
