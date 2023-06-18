@@ -3,6 +3,16 @@
             [functions.core :refer :all]
             [test.helpers :refer :all]))
 
+(deftest short-circuit-reduce-test
+  (let [test-one (= 15 (short-circuit-reduce + 0 (fn [a _] (< 10 a)) (range 0 10)))
+        test-two (= [0 6 12 18] (short-circuit-reduce
+                                  (fn [a _] (conj a (* 6 (+ (count a)))))
+                                  []
+                                  (fn [_ n] (false? n))
+                                  [true true true true false]))
+        tests-passed (is (true? (and test-one test-two)))]
+    tests-passed))
+
 (deftest reduce-int-tests
   "Testing that reduce-int works correctly."
   (let [test-one (= 66 (reduce-int 12 +))

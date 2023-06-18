@@ -1,33 +1,16 @@
 (ns functions.core)
 
-
-
-
-;((reduce_number n) check-fizz-buzz [])
-
-(defn reduce-int-elsewhere
-  "An implementation of reduce-int but more explicit.
-  The purpose is exclusively for reference for other languages."
-  [n]
-  (fn [fn initial-value short-circuit]
-    ;  let accumulator = initial_value;
-    ;  if(short_circuit !== false) {
-    ;  for (let i = 1; i <= n; i++) {
-    ;  if(short_circuit(accumulator, i)) {
-    ;  return accumulator;
-    ;  }
-    ;  accumulator = fn(accumulator, i);
-    ;  }
-    ;  } else {
-    ;  for (let i = 1; i <= n; i++) {
-    ;  accumulator = fn(accumulator, i);
-    ;  }
-    ;  }
-
-    ;accumulator
-    )
-
-  )
+(defn short-circuit-reduce
+  "Normal reduce function except you pass a function in as short-circuit
+   in the form (fn [acc value] ...).
+   If the result is truthy, it immediately exits the function."
+  [f initial-value short-circuit coll]
+  (let [reducer (fn [accumulator value]
+                  (if (short-circuit accumulator value)
+                    (reduced accumulator)
+                    (f accumulator value)))
+        result (reduce reducer initial-value coll)]
+    result))
 
 (defn reduce-int
   "An absurdly lazy way to reduce over an integer. Note that it reduces over a list.
