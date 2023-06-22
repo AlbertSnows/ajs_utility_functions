@@ -28,6 +28,7 @@ module.exports = {
     'react'
   ],
   rules: {
-    camelcase: 'off'
+    camelcase: 'off',
+    semi: 'always'
   }
 }
