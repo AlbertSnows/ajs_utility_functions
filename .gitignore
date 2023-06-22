@@ -10,3 +10,4 @@
 /node_modules/
 /.clj-kondo/
 /.lsp/
+package-lock.json
