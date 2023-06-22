@@ -1,5 +1,3 @@
-// helpful run code plugin: https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
-//todo: move above line to test
 // Example closure implementation. If you want mutable state, you need to do a deep copy to avoid referential problems.
 const scope = (initial_state, inner_function) => {
   let outer_context = initial_state
