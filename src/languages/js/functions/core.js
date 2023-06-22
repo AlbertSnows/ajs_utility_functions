@@ -16,4 +16,3 @@ const add_number_at_index = (array) => (index, number) => {
 module.exports = {
   add_number_at_index
 };
-sss
