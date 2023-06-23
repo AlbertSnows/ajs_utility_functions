@@ -1,5 +1,0 @@
-# This is an example Mocha config containing every Mocha option plus others.
-file:
-  - './test/languages/js/core.js'
-watch-files:
-  - './test/languages/js/*.js'

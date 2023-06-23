@@ -1,0 +1,6 @@
+{
+  "extension": ["js"],
+  "require": "esm",
+  "file": ["./test/languages/js/core.js"],
+  "watch-files": ["./test/languages/js/*.js"]
+}
