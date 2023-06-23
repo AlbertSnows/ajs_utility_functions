@@ -18,7 +18,7 @@ const reverse_sentence = (phrase) => {
         : swap_array_contents(acc)(idx);
     },
     phrase_as_array,
-    phrase_as_array
+    phrase_as_array, // wrong
   );
   return join(" ", answer);
 };
