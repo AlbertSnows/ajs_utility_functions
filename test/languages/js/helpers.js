@@ -12,8 +12,7 @@ const reverse_sentence = (phrase) => {
   const phrase_as_array = phrase.split(" ");
   const half_array_length = phrase_as_array.length / 2;
   const reduce_while_with_index = addIndex(reduce);
-  const answer = reduce_while_with_index(
-    (acc, val, idx) => {
+  const answer = reduce_while_with_index((acc, val, idx) => {
       return idx >= half_array_length
         ? reduced(acc)
         : swap_array_contents(acc)(idx);
