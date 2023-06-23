@@ -1,5 +1,5 @@
 // Functions written specifically for testing core functions go here
-import { swap, reduceWhile, addIndex, __, reduce, reduced, join } from "ramda"; // https://ramdajs.com/docs/
+import { swap, addIndex, reduce, reduced, join } from "ramda"; // https://ramdajs.com/docs/
 
 const swap_array_contents = (array) => (left_side_index) => {
 	const index_of_last_element = array.length - 1;
@@ -19,8 +19,7 @@ const reverse_sentence = (phrase) => {
 				: swap_array_contents(acc)(idx);
 		},
 		phrase_as_array,
-		phrase_as_array // wrong
-	);
+		phrase_as_array);
 	return join(" ", answer);
 };
 

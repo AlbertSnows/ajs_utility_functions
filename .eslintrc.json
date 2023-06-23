@@ -12,6 +12,10 @@
     },
     
     "rules": {
+        "function-paren-newline": [
+            "off",
+            "consistent"
+        ],
         "camelcase":"off",
         "indent": [
             "error",
