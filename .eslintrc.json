@@ -12,6 +12,7 @@
     },
     
     "rules": {
+        "no-unused-vars":"off",
         "function-paren-newline": [
             "off",
             "consistent"
