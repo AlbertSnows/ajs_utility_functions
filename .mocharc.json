@@ -1,6 +1,8 @@
 {
   "extension": ["js"],
-  "require": "esm",
-  "file": ["./test/languages/js/core.js"],
+  "file": [
+    "./test/languages/js/core.js",
+    "./test/languages/js/rip.js"
+  ],
   "watch-files": ["./test/languages/js/*.js"]
 }
