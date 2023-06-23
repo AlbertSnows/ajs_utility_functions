@@ -1,4 +1,3 @@
-// helpful run code plugin: https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner
 
 import { multiply } from "../../../src/languages/js/core.js";
 import { map } from "ramda"; // https://ramdajs.com/docs/
