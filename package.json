@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "playground to test and reference code design",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "jasmine"
+    "test": "mocha --config=.mocharc.yml"
   },
   "repository": {
     "type": "git",
@@ -28,8 +29,12 @@
     "eslint-plugin-n": "^15.7.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
-    "jasmine": "^5.0.2",
+    "mocha": "*",
+    "chai": "*",
     "prettier": "2.8.8",
     "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "ramda": "^0.29.0"
   }
 }
