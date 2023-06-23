@@ -1,7 +1,15 @@
-
-import { multiply, add_number_at_index } from "../../../src/languages/js/core.js";
-import { map } from "ramda"; // https://ramdajs.com/docs/
 import { assert, expect } from "chai";
+import { map } from "ramda"; // https://ramdajs.com/docs/
+import { multiply, add_number_at_index } from "../../../src/languages/js/core.js";
+import { solve151 } from "./helpers.js";
+// https://leetcode.com/problems/reverse-words-in-a-string/?envType=study-plan-v2&envId=leetcode-75
+describe("151. Reverse Words in a String", () => {
+    it("should reverse the words in a string", () => {
+        const input = "the sky is blue";
+        const output = solve151(input);
+        expect(output).to.equal("blue is sky the");
+    })
+})
 
 describe("add number at index in array", () => {
     it("should have the correct value at the specified array location", () => {
