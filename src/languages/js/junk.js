@@ -8,13 +8,3 @@ const scope = (initial_state, inner_function) => {
   let outer_context = initial_state
   return inner_function(outer_context);
 };
-
-// given an array, index, and number will update at index in array
-// by taking the current value and adding the number to it. 
-// returns a deep copy, useful(?) for closure antics
-const add_number_at_index = (array) => (index, number) => {
-  const number_at_index = number[index]
-  const new_number = number_at_index + number
-  array[index] = new_number
-  return structuredClone(array)
-};
