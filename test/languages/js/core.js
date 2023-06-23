@@ -3,7 +3,6 @@
 import { multiply } from "../../../src/languages/js/core.js";
 import { map } from "ramda"; // https://ramdajs.com/docs/
 import { assert, expect } from "chai";
-import { describe } from "mocha";
 
 describe("simple multiplication test", () => {
     const multiply_test = map(multiply(6), [1, 2, 3]);
