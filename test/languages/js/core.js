@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { assert, expect } from "chai";
 import { map } from "ramda"; // https://ramdajs.com/docs/
 import {
@@ -5,6 +6,7 @@ import {
 	add_number_at_index,
 } from "../../../src/languages/js/core.js";
 import { reverse_sentence } from "./helpers.js";
+// import { mocha, it } from "mocha";
 
 // https://leetcode.com/problems/reverse-words-in-a-string/?envType=study-plan-v2&envId=leetcode-75
 describe("151. Reverse Words in a String", () => {

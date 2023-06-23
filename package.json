@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha --config=.mocharc.yml"
+    "test": "mocha --config=.mocharc.json"
   },
   "repository": {
     "type": "git",
