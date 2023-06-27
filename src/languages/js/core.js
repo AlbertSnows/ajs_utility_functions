@@ -42,7 +42,9 @@ const short_circuit_reduce = f => short_circuit => init => coll => {
 // accepts optional start and end
 // returns an array of numbers from start to end
 const range = (start = 0) => (end) => {
-	return [...Array(end).keys()].map(i => i + start);
+	const inital_range = [...Array(end).keys()];
+	const adjusted_range = inital_range.map(i => i + start);
+	return adjusted_range;
 };
 
 export { 
