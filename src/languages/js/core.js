@@ -39,6 +39,15 @@ const short_circuit_reduce = f => short_circuit => init => coll => {
 	return coll.slice(0).reduce(r_handler, init);
 };
 
+// accepts optional start and end
+// returns an array of numbers from start to end
+const range = (start = 0) => (end) => {
+	return [...Array(end).keys()].map(i => i + start);
+};
 
-
-export { multiply, add_number_at_index, short_circuit_reduce };
+export { 
+	multiply, 
+	add_number_at_index, 
+	short_circuit_reduce,
+	range
+};
