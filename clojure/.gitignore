@@ -6,8 +6,8 @@
 /.idea/modules.xml
 /.idea/misc.xml
 /.idea/ClojureProjectResolveSettings.xml
-/.idea/libraries/
 /node_modules/
 /.clj-kondo/
 /.lsp/
 package-lock.json
+/.m2/
