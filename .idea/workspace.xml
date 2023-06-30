@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="03a986c6-75d4-4325-a379-2321484b4f4c" name="Changes" comment="minor change">
+      <change afterPath="$PROJECT_DIR$/clojure/ajs_utility_functions.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clojure/deps.edn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clojure/src/leetcode.clj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javascript/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/clojure/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mocharc.json" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/.mocharc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajs_utility_functions.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/deps.edn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/languages/clojure/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/clojure/src/core.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/languages/js/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/src/core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/languages/js/junk.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/src/junk.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/languages/js/leetcode.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/src/leetcode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/languages/js/leetcode.md" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/src/leetcode.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/languages/clojure/core.clj" beforeDir="false" afterPath="$PROJECT_DIR$/clojure/test/core.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/languages/clojure/helpers.clj" beforeDir="false" afterPath="$PROJECT_DIR$/clojure/test/helpers.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/languages/js/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/test/core.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/languages/js/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/test/helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/languages/js/rip.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascript/test/rip.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DepsLocalSettings">
+    <option name="repoId" value="" />
+    <option name="repoUrl" value="" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Clojure Namespace" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2RJDKIbJbQBo7nX5gLdoC4NBkew" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cursive.last.file.extension.E\\:/Programming/Clojure/projects/ajs_utility_functions/src": "clj",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "E:/Programming/utility/ajs_utility_functions/clojure",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.11415523",
+    "settings.editor.selected.configurable": "terminal"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Programming\utility\ajs_utility_functions\javascript" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Programming\utility\ajs_utility_functions\javascript\test" />
+      <recent name="E:\Programming\utility\ajs_utility_functions\clojure\test" />
+      <recent name="E:\Programming\utility\ajs_utility_functions\clojure\src" />
+      <recent name="E:\Programming\utility\ajs_utility_functions\javascript\src" />
+      <recent name="E:\Programming\utility\ajs_utility_functions\clojure" />
+    </key>
+  </component>
+  <component name="ReplState" timestamp="1688143352214">{:repl-history {:ide [], :local [{:command &quot;(+ 1 1)&quot;, :offset 7, :ns &quot;user&quot;}], :remote []}}</component>
+  <component name="RunManager" selected="Clojure REPL.local dong">
+    <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="bbPath" value="" />
+      <setting name="parameters" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <setting name="workingDir" value="" />
+      <setting name="focusEditor" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <option name="configVersion" value="1" />
+      <option name="execution" value="LEININGEN" />
+      <option name="options" />
+      <option name="profiles" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="SOCKET" />
+      <setting name="configType" value="SPECIFY" />
+      <setting name="replPortFileType" value="STANDARD" />
+      <setting name="customPortFile" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <setting name="focusEditor" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="local dong" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <option name="configVersion" value="1" />
+      <option name="displayName" value="local dong" />
+      <module name="ajs_utility_functions" />
+      <option name="options" />
+      <option name="profiles" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run tests in test.core" type="ClojureTestRunConfiguration" factoryName="clojure.test" temporary="true">
+      <module name="ajs_utility_functions" />
+      <option name="namespace" value="test.core" />
+      <option name="options" />
+      <option name="profiles" />
+      <option name="selector" value="SINGLE_NS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test test.core/fizzbuzz-test" type="ClojureTestRunConfiguration" factoryName="clojure.test" temporary="true">
+      <module name="ajs_utility_functions" />
+      <option name="selector" value="SINGLE_VAR" />
+      <option name="varFqn" value="test.core/fizzbuzz-test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test test.core/reduce-int-tests" type="ClojureTestRunConfiguration" factoryName="clojure.test" temporary="true">
+      <module name="ajs_utility_functions" />
+      <option name="selector" value="SINGLE_VAR" />
+      <option name="varFqn" value="test.core/reduce-int-tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test test.core/sanity-success-test" type="ClojureTestRunConfiguration" factoryName="clojure.test" temporary="true">
+      <module name="ajs_utility_functions" />
+      <option name="selector" value="SINGLE_VAR" />
+      <option name="varFqn" value="test.core/sanity-success-test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test test.core/short-circuit-reduce-test" type="ClojureTestRunConfiguration" factoryName="clojure.test" temporary="true">
+      <module name="ajs_utility_functions" />
+      <option name="selector" value="SINGLE_VAR" />
+      <option name="varFqn" value="test.core/short-circuit-reduce-test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Clojure REPL.local dong" />
+      <item itemvalue="clojure.test.Run tests in test.core" />
+      <item itemvalue="clojure.test.Test test.core/fizzbuzz-test" />
+      <item itemvalue="clojure.test.Test test.core/reduce-int-tests" />
+      <item itemvalue="clojure.test.Test test.core/sanity-success-test" />
+      <item itemvalue="clojure.test.Test test.core/short-circuit-reduce-test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="clojure.test.Run tests in test.core" />
+        <item itemvalue="clojure.test.Test test.core/short-circuit-reduce-test" />
+        <item itemvalue="clojure.test.Test test.core/reduce-int-tests" />
+        <item itemvalue="clojure.test.Test test.core/sanity-success-test" />
+        <item itemvalue="clojure.test.Test test.core/fizzbuzz-test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="03a986c6-75d4-4325-a379-2321484b4f4c" name="Changes" comment="" />
+      <created>1686959224959</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686959224959</updated>
+    </task>
+    <task id="LOCAL-00001" summary="first files">
+      <created>1686967009233</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1686967009233</updated>
+    </task>
+    <task id="LOCAL-00002" summary="more stuff">
+      <created>1686967134499</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1686967134499</updated>
+    </task>
+    <task id="LOCAL-00003" summary="added helpers">
+      <created>1686967216015</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686967216015</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updating the functions, WIP">
+      <created>1686970135800</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686970135801</updated>
+    </task>
+    <task id="LOCAL-00005" summary="minor fixes, finalizing function structure">
+      <created>1687020541781</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1687020541781</updated>
+    </task>
+    <task id="LOCAL-00006" summary="adding reduce-int">
+      <created>1687115813718</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1687115813718</updated>
+    </task>
+    <task id="LOCAL-00007" summary="adding another function">
+      <created>1687126864984</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1687126864984</updated>
+    </task>
+    <task id="LOCAL-00008" summary="minor change">
+      <created>1687126957858</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1687126957858</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="first files" />
+    <MESSAGE value="more stuff" />
+    <MESSAGE value="added helpers" />
+    <MESSAGE value="updating the functions, WIP" />
+    <MESSAGE value="minor fixes, finalizing function structure" />
+    <MESSAGE value="adding reduce-int" />
+    <MESSAGE value="adding another function" />
+    <MESSAGE value="minor change" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor change" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
