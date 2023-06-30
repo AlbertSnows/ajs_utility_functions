@@ -2,13 +2,11 @@
 <module type="JAVA_MODULE" version="4">
   <component name="BuildSystem">
     <option name="buildSystemId" value="CLOJURE_DEPS" />
-    <option name="displayName" value="ajs_utility_functions" />
+    <option name="displayName" value="clojure" />
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/languages/clojure" isTestSource="false" />
-    </content>
+    <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
