@@ -1,6 +1,4 @@
-{:paths ["src/main/languages/clojure"]
- :deps
+{:paths ["src"]
  :mvn/local-repo ".m2/repository"
- {
-  clojure.java-time/clojure.java-time {:mvn/version "1.1.0"} ; not needed
-  }}
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+				org.clojure/tools.namespace {:mvn/version "1.4.4"}}}

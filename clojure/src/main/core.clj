@@ -1,4 +1,8 @@
-(ns functions.core)
+(ns main.core)
+
+
+(defn -main [& args]
+      "I don't do anything. ")
 
 (defn short-circuit-reduce
   "Normal reduce function except you pass a function in as short-circuit
