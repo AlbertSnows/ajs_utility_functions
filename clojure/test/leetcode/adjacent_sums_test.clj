@@ -1,7 +1,6 @@
 (ns leetcode.adjacent-sums-test
 	(:require
 	 [clojure.test :refer :all]
-	 [functions.core :refer :all]
 	 [leetcode.adjacent-sums :refer :all]))
 
 (defn test-adjacent-sum
