@@ -12,3 +12,4 @@
 package-lock.json
 /.m2/
 *.iml
+/clojure/.idea/
