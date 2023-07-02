@@ -1,9 +1,16 @@
-(ns leetcode.core
+(ns leetcode.adjacent-sums-test
 	(:require
 	 [clojure.test :refer :all]
 	 [functions.core :refer :all]
-	 [main.leetcode.adjacent-sums :refer :all]
-	 [test.helpers :refer :all]))
+	 [leetcode.adjacent-sums :refer :all]))
+
+(defn test-adjacent-sum
+	[_ {:keys [case answer]}]
+	(let [possible-answer (apply find-sums case)
+				passed-test (= possible-answer answer)]
+		(if passed-test
+			true
+			(reduced false))))
 
 (deftest adjacent-sums-test
 	(testing "Test that ensures ajacent sums at a high level works.

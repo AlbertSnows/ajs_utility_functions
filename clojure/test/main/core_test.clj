@@ -1,9 +1,8 @@
 (ns main.core-test
 	(:require
 	 [clojure.test :refer :all]
-	 [functions.core :refer :all]
-	 [main.leetcode.adjacent-sums :refer :all]
-	 [test.helpers :refer :all]))
+	 [main.core :refer :all]
+	 [main.helpers :refer :all]))
 
 (deftest short-circuit-reduce-test
 	(testing "Testing that a short-circuit reduce works correctly."

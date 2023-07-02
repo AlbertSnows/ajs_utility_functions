@@ -1,13 +1,7 @@
-(ns helpers
-  (:require [functions.core :refer :all]))
+(ns main.helpers
+  (:require [main.core :refer :all]))
 
-(defn test-adjacent-sum
-	[passed-so-far {:keys [case answer]}]
-	(let [possible-answer (apply find-sums case)
-				passed-test (= possible-answer answer)]
-		(if passed-test
-			true
-			(reduced false))))
+
 
 (defn setup-check-fizzbuzz [div-by-3 div-by-5]
 	(fn [fizzbuzz-answers number]
