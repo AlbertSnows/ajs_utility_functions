@@ -11,3 +11,4 @@
 /.lsp/
 package-lock.json
 /.m2/
+../.idea/
