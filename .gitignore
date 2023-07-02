@@ -1,4 +1,4 @@
-/.cpcache/
+/clojure/.cpcache/
 /.idea/
 /.nrepl-port
 /.idea/libraries/
