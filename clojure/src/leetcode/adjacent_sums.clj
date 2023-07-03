@@ -1,8 +1,5 @@
 (ns leetcode.adjacent-sums)
 
-; reverse vowels
-; make newspaper with asterisk
-
 (defn add-possible-sums-to-current-number [current-number numbers-to-sum]
 	(fn [sums amount-to-take]
 		(let [new-sum (reduce + current-number (take amount-to-take numbers-to-sum))
