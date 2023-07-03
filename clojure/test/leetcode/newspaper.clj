@@ -1,6 +1,7 @@
 (ns leetcode.newspaper
 	(:require [clojure.test :refer :all]
-						[leetcode.newspaper :refer :all]))
+						[leetcode.newspaper :refer :all]
+						[main.helpers :refer :all]))
 
 (def default-test-case ["The quick" "brown foxjumps over" "thelazy dog yo!"])
 
@@ -74,20 +75,7 @@
 					passed (is (= result expected))]
 			passed)))
 
-(defn zip-vectors [left right keys]
-	(let [indexes (range 0 (count left))
-				combine-vectors
-				(fn [combined index]
-					(let [left-value (left index)
-								right-value (right index)
-								left-key (keys index)
-								right
-								result {()}
-								]
-						result))
-				result (reduce combine-vectors [] indexes)
-				]
-		result))
+
 
 (deftest make-newspaper-test
 	(testing "Trying to make a newspaper."
@@ -107,12 +95,13 @@
 											[vec-of-words 8]
 											[["a" "b c def" "g" "h"] 3]
 											[["aoeusnot"] 13]]
-					run-test-cases (fn [results case] (conj results (apply make-newspaper case)))
-					result (reduce run-test-cases [] test-cases)
-					passed
-					result
-					;(is (= result expected))
-					]
+					zipped-data (zip-vectors
+												{:key :params :values test-cases}
+												{:key :expected :values expected})
+					results-with-expected (reduce (run-test-cases make-newspaper) [] zipped-data)
+					check-results-with-expected #(and %1 (= (:expected %2) (:result %2)))
+					all-tests-passed (reduce check-results-with-expected true results-with-expected)
+					passed (is (true? all-tests-passed))]
 			passed)))
 
 (deftest newspaper-test

@@ -1,7 +1,34 @@
 (ns main.helpers
-  (:require [main.core :refer :all]))
+	(:require [main.core :refer :all]))
 
+(defn combine-vectors [left-values right-values left-keyword right-keyword]
+	(fn [combined index]
+		(let [left-value (left-values index)
+					right-value (right-values index)
+					new-map {left-keyword  left-value
+									 right-keyword right-value}
+					result (conj combined new-map)]
+			result)))
 
+(defn zip-vectors [left right]
+	(let [left-keyword (:key left)
+				left-values (:values left)
+				right-keyword (:key right)
+				right-values (:values right)
+				indexes (range 0 (count left-values))
+				result (reduce
+								 (combine-vectors left-values right-values left-keyword right-keyword)
+								 []
+								 indexes)]
+		result))
+
+(defn run-test-cases [test-function]
+	(fn [results {:keys [params expected]}]
+		(let [result (apply test-function params)
+					updated-map {:expected expected
+											 :result   result}
+					results-with-new-case (conj results updated-map)]
+			results-with-new-case)))
 
 (defn setup-check-fizzbuzz [div-by-3 div-by-5]
 	(fn [fizzbuzz-answers number]
