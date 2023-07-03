@@ -75,8 +75,6 @@
 					passed (is (= result expected))]
 			passed)))
 
-
-
 (deftest make-newspaper-test
 	(testing "Trying to make a newspaper."
 		(let [vec-of-words (flatten-phrases default-test-case)
@@ -102,6 +100,44 @@
 					check-results-with-expected #(and %1 (= (:expected %2) (:result %2)))
 					all-tests-passed (reduce check-results-with-expected true results-with-expected)
 					passed (is (true? all-tests-passed))]
+			passed)))
+
+(deftest can-make-newspaper?-test
+	(testing "if I can make a newspaper"
+		(let [width 12
+					vec-of-vec-of-words [(flatten-phrases ["aaa b" "c" "d d d d d d d d d"])
+															 (flatten-phrases ["d d d d d d d d d d d d d d d"])]
+
+					can-make-all-newspapers?
+					(reduce #(and %1 (can-make-newspaper? %2 width)) true vec-of-vec-of-words)
+					passed (is (true? can-make-all-newspapers?))]
+			passed)))
+
+(deftest flatten-phrases-test
+	(testing "if I can flatten phrases correctly"
+		(let [test-cases [(flatten-phrases ["aaa b" "c" "d d d d d d d d d"])
+											(flatten-phrases ["d d d d d d d d d d d d d d d"])]
+					expected [["aaa" "b" "c" "d" "d" "d" "d" "d" "d" "d" "d" "d"]
+										["d" "d" "d" "d" "d" "d" "d" "d" "d" "d" "d" "d" "d" "d" "d"]]
+					cases-match-expected
+					(reduce #(and %1 (= (test-cases %2) (expected %2))) true (range 0 (count test-cases)))
+					passed (is (true? cases-match-expected))]
+			passed)))
+
+(deftest try-making-a-newspaper-test
+	(testing "an attempt to make a newspaper"
+		(let [vec-of-phrases [["aaaaaaaaaaaaaaaaaaaaa b"]
+													["uwu" "wuw"]]
+					expected [{:error "Cannot fit largest word into newspaper. Give smaller words or larger width."}
+										["********" "*uwu wuw*" "********"]]
+					width 8
+					try-results (reduce #(conj %1 (try-making-a-newspaper %2 width)) [] vec-of-phrases)
+					cases-match-expected
+					(reduce
+						#(and %1 (= (try-results %2) (expected %2)))
+						true
+						(range 0 (count vec-of-phrases)))
+					passed (is (true? cases-match-expected))]
 			passed)))
 
 (deftest newspaper-test

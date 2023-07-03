@@ -89,7 +89,8 @@
 				newspaper-paragraph (conj (reduce #(conj %1 %2) [string-of-asterisks] finalized-phrases) string-of-asterisks)]
 		newspaper-paragraph))
 
-(defn can-make-newspaper? [vec-of-words width] (not (some #(< width (count %)) vec-of-words)))
+(defn can-make-newspaper? [vec-of-words width]
+	(not (some #(< width (count %)) vec-of-words)))
 
 (defn flatten-phrases [phrases]
 	(into [] (flatten (map #(split % #" ") phrases))))
