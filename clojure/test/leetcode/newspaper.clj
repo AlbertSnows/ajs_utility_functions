@@ -74,6 +74,47 @@
 					passed (is (= result expected))]
 			passed)))
 
+(defn zip-vectors [left right keys]
+	(let [indexes (range 0 (count left))
+				combine-vectors
+				(fn [combined index]
+					(let [left-value (left index)
+								right-value (right index)
+								left-key (keys index)
+								right
+								result {()}
+								]
+						result))
+				result (reduce combine-vectors [] indexes)
+				]
+		result))
+
+(deftest make-newspaper-test
+	(testing "Trying to make a newspaper."
+		(let [vec-of-words (flatten-phrases default-test-case)
+					expected [["************"
+										 "*The quick *"
+										 "*  brown   *"
+										 "* foxjumps *"
+										 "*   over   *"
+										 "*thelazy dog*"
+										 "*   yo!    *"
+										 "************"]
+										["********" "* The  *" "*quick *" "*brown *" "*foxjumps*" "* over *" "*thelazy*" "*dog yo!*" "********"]
+										["***" "*a*" "*b c def*" "*g*" "*h*" "***"]
+										["*************" "* aoeusnot  *" "*************"]]
+					test-cases [[vec-of-words 12]
+											[vec-of-words 8]
+											[["a" "b c def" "g" "h"] 3]
+											[["aoeusnot"] 13]]
+					run-test-cases (fn [results case] (conj results (apply make-newspaper case)))
+					result (reduce run-test-cases [] test-cases)
+					passed
+					result
+					;(is (= result expected))
+					]
+			passed)))
+
 (deftest newspaper-test
 	(testing "Test that newspaper at the top level works"
 		(let [test-cases [[" The quick  " "  brown foxjumps over " "  thelazy dog yo!"]
