@@ -23,8 +23,6 @@
 ; ************
 ; Normally you would assume that any given string without spaces will not be greater than
 ; W-2, but I would not assume that here.
-(def paragraph [" The quick  " "  brown foxjumps over " "  thelazy dog yo!"])
-
 (defn zip-word-data [vec-of-words vec-of-word-counts]
 	(fn [zipped index]
 		(let [word (vec-of-words index)

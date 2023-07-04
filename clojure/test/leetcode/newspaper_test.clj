@@ -3,7 +3,8 @@
 						[leetcode.newspaper :refer :all]
 						[main.helpers :refer :all]))
 
-(def default-test-case ["The quick" "brown foxjumps over" "thelazy dog yo!"])
+(def default-test-case
+	["The quick" "brown foxjumps over" "thelazy dog yo!"])
 
 (deftest zip-word-data-test
 	(testing "Testing that zipping data correctly works given the expected data."
@@ -138,11 +139,4 @@
 						true
 						(range 0 (count vec-of-phrases)))
 					passed (is (true? cases-match-expected))]
-			passed)))
-
-(deftest newspaper-test
-	(testing "Test that newspaper at the top level works"
-		(let [test-cases [[" The quick  " "  brown foxjumps over " "  thelazy dog yo!"]
-											""]
-					passed (is (true? (reduce #(and %1 %2) true test-cases)))]
 			passed)))
