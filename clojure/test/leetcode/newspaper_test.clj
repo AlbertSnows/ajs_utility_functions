@@ -1,4 +1,4 @@
-(ns leetcode.newspaper
+(ns leetcode.newspaper-test
 	(:require [clojure.test :refer :all]
 						[leetcode.newspaper :refer :all]
 						[main.helpers :refer :all]))

@@ -9,8 +9,6 @@
 ; racecar => racecar
 ; screaming => scriameng
 
-(def example-word "wooden")                                 ; => weodon
-
 (def vowels [\A \a \E \e \I \i \O \o \U \u])
 
 (defn add-if-vowel [char-vec]
@@ -40,6 +38,7 @@
 	(let [updated-pair (assoc pair :l-index r-index :r-index l-index)
 				updated-swapped (conj swapped updated-pair)]
 		updated-swapped))
+
 (defn reverse-vowels [word]
 	(let [char-vec (vec word)
 				word-count (count char-vec)
@@ -56,5 +55,5 @@
 				word-with-reversed-vowels (join updated-vec)]
 		word-with-reversed-vowels))
 (comment
-	(reverse-vowels "wooden")
+	(reduce #(conj %1 (reverse-vowels %2)) [] ["wooden" "tool" "raid" "roaad"])
 	)
