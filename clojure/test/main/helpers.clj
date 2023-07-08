@@ -1,5 +1,11 @@
 (ns main.helpers
-	(:require [main.core :refer :all]))
+	(:require [clojure.test :refer [function?]]
+						[main.core :refer :all]))
+
+(defn all-tests-passed? [_ {:keys [expected result] :as result-case}]
+	(let [passed (if (function? expected) (expected result) (= expected result))
+				result (if passed true (reduced result-case))]
+		result))
 
 (defn combine-vectors [left-values right-values left-keyword right-keyword]
 	(fn [combined index]

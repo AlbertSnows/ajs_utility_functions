@@ -32,7 +32,7 @@
 														 (<= number n-1))
 				success-case {:number-of-incrimental-indices (inc number-of-incrimental-indices)
 											:n-1                           number}
-				fail-case {:number-of-incrimental-indices 0 :n-1 number}
+				fail-case {:number-of-incrimental-indices 1 :n-1 number}
 				updated-state
 				(cond
 					starting-sequence? success-case
