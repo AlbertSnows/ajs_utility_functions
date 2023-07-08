@@ -1,11 +1,23 @@
 (ns main.helpers
 	(:require [clojure.test :refer [function?]]
 						[main.core :refer :all]))
+(defn run-test-cases [test-function]
+	(fn [results {:keys [params expected]}]
+		(let [result (apply test-function params)
+					updated-map {:expected expected
+											 :result   result}
+					results-with-new-case (conj results updated-map)]
+			results-with-new-case)))
 
-(defn all-tests-passed? [_ {:keys [expected result] :as result-case}]
+(defn test-passed? [_ {:keys [expected result] :as result-case}]
 	(let [passed (if (function? expected) (expected result) (= expected result))
 				result (if passed true (reduced result-case))]
 		result))
+
+(defn all-tests-passed? [test-function test-cases]
+	(->> test-cases
+		(reduce (run-test-cases test-function) [])
+		(reduce test-passed? true)))
 
 (defn combine-vectors [left-values right-values left-keyword right-keyword]
 	(fn [combined index]
@@ -27,14 +39,6 @@
 								 []
 								 indexes)]
 		result))
-
-(defn run-test-cases [test-function]
-	(fn [results {:keys [params expected]}]
-		(let [result (apply test-function params)
-					updated-map {:expected expected
-											 :result   result}
-					results-with-new-case (conj results updated-map)]
-			results-with-new-case)))
 
 (defn setup-check-fizzbuzz [div-by-3 div-by-5]
 	(fn [fizzbuzz-answers number]
