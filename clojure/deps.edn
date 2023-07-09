@@ -1,5 +1,6 @@
 {:paths ["src" "test"]
- :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+ :deps {net.mikera/core.matrix {:mvn/version "0.63.0"}
+				org.clojure/clojure {:mvn/version "1.11.1"}
 				org.clojure/tools.namespace {:mvn/version "1.4.4"}}
  :aliases {:test {:extra-paths ["test"]
 									:extra-deps {io.github.cognitect-labs/test-runner  ; https://github.com/cognitect-labs/test-runner
