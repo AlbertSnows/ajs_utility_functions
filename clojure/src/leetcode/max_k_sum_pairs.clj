@@ -19,8 +19,8 @@
 		pairs-found))
 
 (comment
-	(find-max-k-sum-pairs [1 2 3 4] 5)
-	(find-max-k-sum-pairs [3 1 3 4 3] 6)
+	((check-for-pairs 12) [3 1 3 4 3] 7)
+
 	)
 
 ; [ 0 6 1 5 2 4 3 3 ] 6
