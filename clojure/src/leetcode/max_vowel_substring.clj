@@ -8,8 +8,6 @@
 					updated-current-length (if is-vowel (inc current) 0)
 					max-found (max found updated-current-length)
 					reached-max (= max-length max-found)
-
-
 					updated-state (if reached-max (reduced {:found max-found})
 													{:current updated-current-length
 													 :found   max-found})]
