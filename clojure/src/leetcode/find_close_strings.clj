@@ -1,11 +1,16 @@
 (ns leetcode.find-close-strings)
 
 (defn are-close-strings? [first-word second-word]           ; assuming same length
-	(let [grab-unique-chars #(set (vec %))
-				unique-chars-in-first-word (grab-unique-chars first-word)
-				unique-chars-in-second-word (grab-unique-chars second-word)
-				are-equal? (= unique-chars-in-first-word unique-chars-in-second-word)
-				answer are-equal?]
+	(let [first-word-frequencies (frequencies first-word)
+				second-word-frequencies (frequencies second-word)
+				first-word-keys (set (keys first-word-frequencies))
+				second-word-keys (set (keys second-word-frequencies))
+				first-word-vals (sort (vals first-word-frequencies))
+				second-word-vals (sort (vals second-word-frequencies))
+				same-letters (= first-word-keys second-word-keys)
+				same-frequencies (= second-word-vals first-word-vals)
+				are-close? (and same-letters same-frequencies)
+				answer are-close?]
 		; can add (= count1 count2) logic to solve diff lengths
 		answer))
 ; todo: this solution is wrong, come back to later
@@ -13,6 +18,7 @@
 ; compare unique letters
 ; compare letter counts
 (comment
- (are-close-strings? "abc" "bca")
+ (are-close-strings? "acbb" "bcca")
  (are-close-strings? "cabbba" "abbccc")
+ (are-close-strings? "aabbcc" "abbbbc")
  )
