@@ -1,9 +1,6 @@
 (ns leetcode.equal-row-and-column-pairs
 	(:require [clojure.core.matrix :refer [transpose]]))
 
-(defn -main [& args]
-	"hello world")
-
 (defn count-matching-vectors [matrix-to-compare]
 	(fn [total-identical vector]
 		(let [inc-if-equal #(if (= %2 vector) (inc %1) %1)

@@ -1,8 +1,5 @@
 (ns leetcode.max-consecutive-ones)
 
-(defn -main [& args]
-	"hello world")
-
 (defn calc-current-consecutive [numbers]
 	(fn [{:keys [available-swaps follower]} number]
 		(let [is-one? (= 1 number)

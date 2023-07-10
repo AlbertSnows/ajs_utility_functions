@@ -33,15 +33,15 @@
 
 (defn handle-exceeded-width [reordered-words current-phrase word-count word]
 	(let [reordered-words-with-new-phrase (conj reordered-words current-phrase)
-				updated-state {:current-sum word-count
-											 :current-phrase [word]
+				updated-state {:current-sum     word-count
+											 :current-phrase  [word]
 											 :reordered-words reordered-words-with-new-phrase}]
 		updated-state))
 
 (defn handle-below-or-at-width [current-phrase word current-sum word-count]
 	(let [updated-current-phrase (conj current-phrase word)
 				new-sum (+ current-sum word-count)
-				updated-state {:current-sum new-sum
+				updated-state {:current-sum    new-sum
 											 :current-phrase updated-current-phrase}]
 		updated-state))
 
@@ -51,8 +51,8 @@
 					answer (if (> new-current-sum actual-width)
 									 (handle-exceeded-width reordered-words current-phrase word-count word)
 									 (merge
-										{:reordered-words reordered-words}
-										(handle-below-or-at-width current-phrase word current-sum word-count)))]
+										 {:reordered-words reordered-words}
+										 (handle-below-or-at-width current-phrase word current-sum word-count)))]
 			answer)))
 
 (defn add-phrase-count [phrases phrase]
@@ -76,8 +76,8 @@
 				list-of-indexes (range 0 (count vec-of-word-counts))
 				words-with-metadata (reduce (zip-word-data vec-of-words vec-of-word-counts) [] list-of-indexes)
 				reordered-words-result
-				(reduce (reorder-words actual-width) {:current-sum 0
-																							:current-phrase []
+				(reduce (reorder-words actual-width) {:current-sum     0
+																							:current-phrase  []
 																							:reordered-words []} words-with-metadata)
 				reordered-words (conj (:reordered-words reordered-words-result) (:current-phrase reordered-words-result))
 				corrected-paragraph (map #(join " " %) reordered-words)
@@ -103,8 +103,5 @@
 		result))
 
 (comment
- (try-making-a-newspaper paragraph 12)
- )
-
-(defn -main [& args]
-	"hello world")
+	(try-making-a-newspaper paragraph 12)
+	)

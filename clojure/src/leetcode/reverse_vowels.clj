@@ -55,8 +55,5 @@
 				word-with-reversed-vowels (join updated-vec)]
 		word-with-reversed-vowels))
 (comment
- (reduce #(conj %1 (reverse-vowels %2)) [] ["wooden" "tool" "raid" "roaad"])
- )
-
-(defn -main [& args]
-	"hello world")
+	(reduce #(conj %1 (reverse-vowels %2)) [] ["wooden" "tool" "raid" "roaad"])
+	)

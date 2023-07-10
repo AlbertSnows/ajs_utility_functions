@@ -16,25 +16,22 @@
 ;Explanation: The triplet (3, 4, 5) is valid because
 ; nums[3] == 0 < nums[4] == 4 < nums[5] == 6.
 
-(defn -main [& args]
-	"hello world")
-
 (defn add-incrimental-indices [{:keys [number-of-incrimental-indices n-1]} number]
 	(let [starting-sequence? (= number-of-incrimental-indices 0)
 				middle-success-sequence? (and
-																	(= number-of-incrimental-indices 1)
-																	(> number n-1))
+																	 (= number-of-incrimental-indices 1)
+																	 (> number n-1))
 				middle-fail-sequence? (and
-															 (= number-of-incrimental-indices 1)
-															 (<= number n-1))
+																(= number-of-incrimental-indices 1)
+																(<= number n-1))
 				end-success-sequence? (and
-															 (= number-of-incrimental-indices 2)
-															 (> number n-1))
+																(= number-of-incrimental-indices 2)
+																(> number n-1))
 				end-fail-sequence? (and
-														(= number-of-incrimental-indices 2)
-														(<= number n-1))
+														 (= number-of-incrimental-indices 2)
+														 (<= number n-1))
 				success-case {:number-of-incrimental-indices (inc number-of-incrimental-indices)
-											:n-1 number}
+											:n-1                           number}
 				fail-case {:number-of-incrimental-indices 1 :n-1 number}
 				updated-state
 				(cond
@@ -52,7 +49,7 @@
 		answer))
 
 (comment
- (has-three-increasing-indices [1 2 3 4 5])
- (has-three-increasing-indices [5 4 3 2 1])
- (has-three-increasing-indices [2 1 5 0 4 6])
- )
+	(has-three-increasing-indices [1 2 3 4 5])
+	(has-three-increasing-indices [5 4 3 2 1])
+	(has-three-increasing-indices [2 1 5 0 4 6])
+	)
