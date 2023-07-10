@@ -13,10 +13,7 @@
 				answer are-close?]
 		; can add (= count1 count2) logic to solve diff lengths
 		answer))
-; todo: this solution is wrong, come back to later
-; steps:
-; compare unique letters
-; compare letter counts
+
 (comment
  (are-close-strings? "acbb" "bcca")
  (are-close-strings? "cabbba" "abbccc")
