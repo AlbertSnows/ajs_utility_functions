@@ -1,5 +1,8 @@
 (ns leetcode.longest-one-deletion-subarray)
 
+(defn -main [& args]
+	"hello world")
+
 (defn calc-next-longest-one-deletion-subarray [nums]
 	(fn [{:keys [max-length before-delete-length after-delete-length]} index]
 		(let [number (nth nums index)

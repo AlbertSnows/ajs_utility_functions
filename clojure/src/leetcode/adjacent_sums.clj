@@ -1,5 +1,8 @@
 (ns leetcode.adjacent-sums)
 
+(defn -main [& args]
+	"hello world")
+
 (defn add-possible-sums-to-current-number [current-number numbers-to-sum]
 	(fn [sums amount-to-take]
 		(let [new-sum (reduce + current-number (take amount-to-take numbers-to-sum))
@@ -41,8 +44,8 @@
 		answer))
 
 (comment
-	(find-sums
-		[1 2 3 4]
-		[4 5 6]
-		9)
-	)
+ (find-sums
+	[1 2 3 4]
+	[4 5 6]
+	9)
+ )

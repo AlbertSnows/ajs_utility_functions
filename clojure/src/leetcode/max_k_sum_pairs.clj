@@ -1,27 +1,30 @@
 (ns leetcode.max-k-sum-pairs)
 
+(defn -main [& args]
+	"hello world")
+
 (defn check-for-pairs [k]
 	(fn [{:keys [singles pairs-found]} number]
 		(let [remainder (- k number)
 					has-partner (contains? singles remainder)
 					updated-state (if has-partner
-													{:singles     (disj singles remainder)
+													{:singles (disj singles remainder)
 													 :pairs-found (inc pairs-found)}
-													{:singles     (conj singles number)
+													{:singles (conj singles number)
 													 :pairs-found pairs-found})]
 			updated-state)))
 
 (defn find-max-k-sum-pairs [nums k]
-	(let [state {:singles     #{}
+	(let [state {:singles #{}
 							 :pairs-found 0}
 				result (reduce (check-for-pairs k) state nums)
 				pairs-found (:pairs-found result)]
 		pairs-found))
 
 (comment
-	((check-for-pairs 12) [3 1 3 4 3] 7)
+ ((check-for-pairs 12) [3 1 3 4 3] 7)
 
-	)
+ )
 
 ; [ 0 6 1 5 2 4 3 3 ] 6
 ; [ a b c d ]
