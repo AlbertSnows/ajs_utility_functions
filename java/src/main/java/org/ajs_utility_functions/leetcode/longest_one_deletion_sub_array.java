@@ -1,4 +1,4 @@
-package leetcode;
+package org.ajs_utility_functions.leetcode;
 
 public class longest_one_deletion_sub_array {
 
