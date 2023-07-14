@@ -72,8 +72,8 @@ public class remove_stars_from_string {
 	public static String remove_stars(String phrase) {
 		final var phrase_as_char_array = phrase.chars().mapToObj(ch -> (char) ch).collect(Collectors.toList());
 		final BiFunction<ArrayDeque<Character>, Character, ArrayDeque<Character>> check_for_star = remove_stars_from_string::check_for_star;
-		final var answer_as_char_queue = reduce(phrase_as_char_array, new ArrayDeque<Character>(), check_for_star);
-		final var answer = "test"; //answer_as_char_queue.toString();
+		final var answer_as_char_queue = reduce(phrase_as_char_array, new ArrayDeque<>(), check_for_star);
+		final var answer = answer_as_char_queue.toString();
 		return answer;
 	}
 }
