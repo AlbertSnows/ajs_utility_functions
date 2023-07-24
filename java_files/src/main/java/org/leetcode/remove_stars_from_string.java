@@ -6,11 +6,12 @@ import org.functions.data_structures.ArrayDequeHelpers;
 import java.util.ArrayDeque;
 import java.util.Collection;
 import java.util.function.BiFunction;
-import java.util.stream.Collectors;
 
 public class remove_stars_from_string {
-
-	//
+	private remove_stars_from_string() {
+		throw new IllegalStateException("Not an instantiable class.");
+	}
+//
 //	You are given a string s, which contains stars *.
 //
 //	In one operation, you can:
@@ -61,7 +62,7 @@ public class remove_stars_from_string {
 		return updated_phrase;
 	}
 
-	public static <V, C extends Collection<V>, A> A reduce(C collection, A accumulator, BiFunction<A, V, A> reducer) {
+	public static <V, C extends Collection<V>, A> A reduce(BiFunction<A, V, A> reducer, A accumulator, C collection) {
 		A result = accumulator;
 		for (V value : collection) {
 			result = reducer.apply(result, value);
@@ -70,11 +71,11 @@ public class remove_stars_from_string {
 	}
 
 	public static String remove_stars(String phrase) {
-		final var phrase_as_char_array = phrase.chars().mapToObj(ch -> (char) ch).collect(Collectors.toList());
+		final var phrase_as_char_array = phrase.chars().mapToObj(ch -> (char) ch).toList();
 		final BiFunction<ArrayDeque<Character>, Character, ArrayDeque<Character>> check_for_star = remove_stars_from_string::check_for_star;
-		final var answer_as_char_queue = reduce(phrase_as_char_array, new ArrayDeque<>(), check_for_star);
-		final var answer = answer_as_char_queue.toString();
-		return answer;
+		final var answer_as_char_queue = reduce(check_for_star, new ArrayDeque<>(), phrase_as_char_array);
+		final var answer = reduce(StringBuilder::append, new StringBuilder(), answer_as_char_queue);
+		return answer.reverse().toString();
 	}
 }
 
