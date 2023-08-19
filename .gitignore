@@ -57,3 +57,5 @@ package-lock.json
 /java_files/.idea/
 /c++/.vscode
 /c++/hello_world/x64
+/clojure/.calva
+/clojure/.cljs_node_repl
