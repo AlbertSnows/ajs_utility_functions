@@ -7,8 +7,8 @@ import java.util.ArrayDeque;
 import java.util.Collection;
 import java.util.function.BiFunction;
 
-public class remove_stars_from_string {
-	private remove_stars_from_string() {
+public class removeStarsFromString {
+	private removeStarsFromString() {
 		throw new IllegalStateException("Not an instantiable class.");
 	}
 //
@@ -72,7 +72,7 @@ public class remove_stars_from_string {
 
 	public static String remove_stars(String phrase) {
 		final var phrase_as_char_array = phrase.chars().mapToObj(ch -> (char) ch).toList();
-		final BiFunction<ArrayDeque<Character>, Character, ArrayDeque<Character>> check_for_star = remove_stars_from_string::check_for_star;
+		final BiFunction<ArrayDeque<Character>, Character, ArrayDeque<Character>> check_for_star = removeStarsFromString::check_for_star;
 		final var answer_as_char_queue = reduce(check_for_star, new ArrayDeque<>(), phrase_as_char_array);
 		final var answer = reduce(StringBuilder::append, new StringBuilder(), answer_as_char_queue);
 		return answer.reverse().toString();
