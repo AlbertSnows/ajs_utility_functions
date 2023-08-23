@@ -34,10 +34,12 @@
         (recur ((check-target n target) state))))))
 
 (defn find-two-sum-for-target [n target]
-  (let [match-result (search-for-matchers n target)
+  (let [match-result (if (empty? n)
+                       {:status "failed"}
+                       (search-for-matchers n target))
         answer (case (:status match-result)
                  "success" [(inc (:left match-result)) (inc (:right match-result))]
-                 [-1 -1])]
+                 [])]
     answer))
 
 
