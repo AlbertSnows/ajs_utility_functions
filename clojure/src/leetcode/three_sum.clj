@@ -1,5 +1,8 @@
 (ns three-sum
-  (:require [two-sum-sorted-array :refer [find-two-sum-for-target]]))
+  (:require 
+   [two-sum-sorted-array 
+    :refer [find-two-sum-for-target]])
+  )
 
 (defn find-two-sum-for-n [sorted-list]
   (fn [{:keys [used three-sums]} fix-index]
@@ -21,6 +24,7 @@
  			))
 
 (comment
+  ;; need to go add all functions 
   (let [n [-1 0 1 2 -1 -4]
        	indexes (range 0 (count n))
         sorted-n (sort n)
@@ -28,5 +32,5 @@
                        {:used #{} :three-sums []}
                        indexes)
         answer result]
-    answer) 
+    answer)
   )
