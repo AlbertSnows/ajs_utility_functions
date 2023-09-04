@@ -33,27 +33,37 @@
 
 
 (comment 
-  (let [n [5 1 2 3 4]
+  (let [n [2 3 4 5 1]
         end (count n)
         ;; indexes (range 0 (count n))
         search-for-min 
-        (fn [{:keys [adjustment pivot]}] 
-          (let [pivot-value (get n pivot)
-                previous-value (get n (- pivot 1) pivot-value)
-                pivot-is-greater? (>= pivot-value previous-value)
-                new-adjustment (quot adjustment 2)
-                new-pivot (if pivot-is-greater? ;; 3 [4]
-                            (- pivot new-adjustment) 
-                            (+ pivot new-adjustment))
-                answer {:adjustment new-adjustment
-                        :pivot new-pivot 
-                        :found (= adjustment 0)}]
-            answer))
+        (fn [{:keys [left middle right]}] 
+          (let [n [2 3 4 5 1]
+                left 3
+                middle 3
+                right 4
+                left-value (get n left)
+                right-value (get n right)
+                move-right? (> left-value right-value)
+                new-left (if move-right? middle left)
+                new-right (if move-right? right middle)
+                adjustment (quot (- right middle) 2)
+                new-middle (if move-right?
+                             (+ middle adjustment)
+                             (- middle adjustment))
+                _ (println [new-left new-middle new-right])
+                answer {:left new-left
+                        :middle new-middle
+                        :right new-right
+                        }]
+            answer)
+          )
         result 
-        (loop [state {:adjustment (quot end 2)
-                      :pivot (quot end 2) 
-                      :found false}]
-          (if (:found state)
+        (loop [state {:left 0
+                      :right (dec end)
+                      :middle (quot end 2)
+                      }]
+          (if (>= (:left state) (:right state))
             state
             (recur (search-for-min state))))
         answer result]
