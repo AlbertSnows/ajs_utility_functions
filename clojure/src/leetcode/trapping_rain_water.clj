@@ -30,7 +30,7 @@
 (comment 
   (let [height [0,1,0,2,1,0,1,3,2,1,2,1]
         indexes (range 0 (count height))
-        set-max-wall-for-index 
+        set-max-wall-for-left-index
         (fn [{:keys [max-so-far max-sizes]} index]
           (let [new-left-wall (get height (dec index))
                 larger? (> new-left-wall max-so-far)
@@ -39,13 +39,36 @@
                 answer {:max-so-far updated-max-left
                         :max-sizes updated-max-sizes}]
             answer))
-        max-left-wall-for-index (reduce set-max-wall-for-index
-                                        {:max-so-far 0 :max-sizes [0]}
-                                        (rest indexes))
-        ;; max-right-wall-for-index (reduce set-max-wall-for-index 
-        ;;                                  {:max-so-far 0 :max-sizes []}
-        ;;                                  (reverse indexes))
-        ;; ;; containers (reduce check-containers seed indexes)
-        answer max-left-wall-for-index]
+        max-left-wall-for-index (:max-sizes
+                                 (reduce set-max-wall-for-left-index
+                                         {:max-so-far 0 :max-sizes [0]}
+                                         (rest indexes)))
+        set-max-wall-for-right-index
+        (fn [{:keys [max-so-far max-sizes]} index]
+          (let [new-left-wall (get height (inc index))
+                larger? (> new-left-wall max-so-far)
+                updated-max-left (if larger? new-left-wall max-so-far)
+                updated-max-sizes (conj max-sizes updated-max-left)
+                answer {:max-so-far updated-max-left
+                        :max-sizes updated-max-sizes}]
+            answer))
+        max-right-wall-for-index (vec 
+                                  (reverse
+                                   (:max-sizes
+                                    (reduce set-max-wall-for-right-index
+                                            {:max-so-far 0 :max-sizes [0]}
+                                            (rest (reverse indexes))))))
+        find-min-for-index
+        (fn [mins index] 
+          (conj mins (min (get max-left-wall-for-index index) 
+                          (get max-right-wall-for-index index))))
+        min-wall-for-index (reduce find-min-for-index [] indexes)
+        get-diff-of-wall-height-and-container 
+        (fn [index]
+          (- (get min-wall-for-index index) (get height index)))
+        remaining-water (map get-diff-of-wall-height-and-container indexes)
+        valid-containers (filter #(> % 0) remaining-water)
+        answer (apply + valid-containers)
+        ]
     answer)
   )
