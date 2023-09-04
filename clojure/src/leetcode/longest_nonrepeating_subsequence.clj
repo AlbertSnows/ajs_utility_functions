@@ -35,19 +35,20 @@
                 found-repeat? (contains? unique-chars leader-char)
                 follower-char (get phrase-as-char-array follower)
                 leader-equals-follower? (= leader-char follower-char)
-                updated-unique-chars
-                (cond 
-                  (not found-repeat?) (conj unique-chars leader-char)
-                  (= leader-char follower-char) unique-chars
-                  :else (disj unique-chars follower-char))
-                matching-chars-or-still-searching? 
+                updated-unique-chars (cond
+                                       (not found-repeat?) (conj unique-chars leader-char)
+                                       (= leader-char follower-char) unique-chars
+                                       :else (disj unique-chars follower-char))
+                matching-chars-or-still-searching?
                 (or leader-equals-follower?
                     (contains? updated-unique-chars leader-char))
-                update-follower? (and found-repeat?
-                                      matching-chars-or-still-searching?)
+
+                update-follower? (and found-repeat? matching-chars-or-still-searching?)
                 updated-follower (if update-follower? (inc follower) follower)
+
                 update-leader? (or (not update-follower?) leader-equals-follower?)
                 updated-leader (if update-leader? (inc leader) leader)
+
                 updated-max (cond
                               (not found-repeat?) (max max-unique
                                                        (- updated-leader follower))
