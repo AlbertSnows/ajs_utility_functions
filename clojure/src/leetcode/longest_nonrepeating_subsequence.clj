@@ -52,12 +52,9 @@
                               (not found-repeat?) (max max-unique
                                                        (- updated-leader follower))
                               :else max-unique)
-                _ (println ["au" updated-follower updated-leader
-                            updated-unique-chars updated-max])
                 answer {:follower updated-follower :leader updated-leader
                         :unique-chars updated-unique-chars :max-unique updated-max}]
-            answer)
-            )
+            answer))
         result 
         (loop [state {:follower 0 :unique-chars #{} :leader 0 :max-unique 0}]
           (if (>= (:leader state) (count phrase-as-char-array))
