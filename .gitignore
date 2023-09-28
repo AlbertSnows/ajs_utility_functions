@@ -1,41 +1,7 @@
-/java_files/target/
-/java_files/!.mvn/wrapper/maven-wrapper.jar
-/java_files/!**/src/main/**/target/
-/java_files/!**/src/test/**/target/
-
 ### IntelliJ IDEA ###
-/java_files/.idea/modules.xml
-/java_files/.idea/jarRepositories.xml
-/java_files/.idea/compiler.xml
-/java_files/.idea/libraries/
 /java/*.iws
 /java/*.iml
 /java/*.ipr
-
-### Eclipse ###
-/java_files/.apt_generated
-/java_files/.classpath
-/java_files/.factorypath
-/java_files/.project
-/java_files/.settings
-/java_files/.springBeans
-/java_files/.sts4-cache
-
-### NetBeans ###
-/java_files/nbproject/private/
-/java_files/nbbuild/
-/java_files/dist/
-/java_files/nbdist/
-/java_files/.nb-gradle/
-/java_files/build/
-/java_files/!**/src/main/**/build/
-/java_files/!**/src/test/**/build/
-
-### VS Code ###
-/java_files/.vscode/
-
-### Mac OS ###
-/java_files/.DS_Store
 
 # extra
 /clojure/.cpcache/
