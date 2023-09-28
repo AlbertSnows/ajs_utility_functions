@@ -61,3 +61,8 @@ package-lock.json
 /clojure/.cljs_node_repl
 /clojure/.clj-kondo
 /clojure/.lsp
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
